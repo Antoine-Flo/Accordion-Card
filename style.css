@@ -6,6 +6,7 @@
     box-sizing: inherit;
 }
 
+
 body {
     box-sizing: border-box;
     background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
@@ -22,14 +23,10 @@ h1 {
     margin-bottom: 3rem;
 }
 
-
-
-
-
 .container {
     position: relative;
     background-color: white;
-    margin: 17rem auto;
+    margin: 18rem auto;
     max-width: 100rem;
     width: 80%;
     height: 55rem;
@@ -48,17 +45,6 @@ h1 {
         0 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-@media (max-width: 986px) {
-    .container {
-        margin: 20rem auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        max-width: 100rem;
-        width: 80%;
-        height: 100rem;
-    }
-}
 
 .container-box {
     position: absolute;
@@ -90,14 +76,7 @@ h1 {
     transform: translateX(-57rem);
 }
 
-@media (max-width: 986px) {
-    .pattern-deskop {
-        position: relative;
-        width: 43rem;
-        top: -20rem;
-        transform: translateX(11rem);
-    }
-}
+
 
 .woman-online {
     position: absolute;
@@ -105,14 +84,12 @@ h1 {
     top: 5rem;
     left: -9rem;
 }
-@media (max-width: 986px) {
-    .woman-online {
-        position: absolute;
-        width: 10%;
-        top: 5rem;
-        left: -9rem;
-    }
+
+.woman-online-mobile {
+    position: absolute;
+    visibility: hidden;
 }
+
 
 .text {
     display: flex;
@@ -163,4 +140,50 @@ h1 {
     padding-top: 2rem;
     display: none;
     overflow: hidden;
+}
+
+
+@media (max-width: 986px) {
+
+    h1 {
+        text-align: center;
+        font-size: 5rem;
+    }
+
+    .container {
+        margin: 20rem auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20rem 1fr;
+        max-width: 100rem;
+        width: 70%;
+        height: 80rem;
+    }
+
+    .pattern-deskop {
+        position: absolute;
+        width: 43rem;
+        top: -20rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .woman-online {
+        visibility: hidden;
+    }
+
+    .woman-online-mobile {
+        visibility: visible;
+        position: absolute;
+        min-width: 48rem;
+        top: 4rem;
+        left: 47%;
+        transform: translate(-50%, 0);
+        z-index: 400;
+    }
+
+    .box-desktop {
+        visibility: hidden;
+    }
+
 }
