@@ -17,18 +17,22 @@ html {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     color: black;
     margin-bottom: 3rem;
 }
+
+
+
+
 
 .container {
     position: relative;
     background-color: white;
     margin: 17rem auto;
-    max-width: 130rem;
+    max-width: 100rem;
     width: 80%;
-    height: 60rem;
+    height: 55rem;
     border-radius: 50px;
 
     display: grid;
@@ -44,26 +48,37 @@ h1 {
         0 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-
+@media (max-width: 986px) {
+    .container {
+        margin: 20rem auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-width: 100rem;
+        width: 80%;
+        height: 100rem;
+    }
+}
 
 .container-box {
     position: absolute;
-    background-color: red;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 130rem;
+    max-width: 100rem;
     width: 80%;
-    height: 60rem;
+    height: 55rem;
     border-radius: 50px;
     z-index: 500;
     visibility: hidden;
 }
 
+
+
 .box-desktop {
-    width: 28rem;
+    width: 22rem;
     position: absolute;
     top: 20rem;
-    left: -15rem;
+    left: -11rem;
     z-index: 500;
     visibility: visible;
 }
@@ -71,15 +86,32 @@ h1 {
 .pattern-deskop {
     position: absolute;
     width: 102rem;
-    top: -21rem;
-    transform: translateX(-50rem);
+    top: -31rem;
+    transform: translateX(-57rem);
+}
+
+@media (max-width: 986px) {
+    .pattern-deskop {
+        position: relative;
+        width: 43rem;
+        top: -20rem;
+        transform: translateX(11rem);
+    }
 }
 
 .woman-online {
     position: absolute;
-    min-width: 60rem;
-    top: 4rem;
+    min-width: 54rem;
+    top: 5rem;
     left: -9rem;
+}
+@media (max-width: 986px) {
+    .woman-online {
+        position: absolute;
+        width: 10%;
+        top: 5rem;
+        left: -9rem;
+    }
 }
 
 .text {
@@ -87,7 +119,7 @@ h1 {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 6.5rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 2rem;
     font-family: 'Kumbh Sans', sans-serif;
 }
@@ -98,7 +130,7 @@ h1 {
 }
 
 .question {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     display: flex;
     justify-content: space-between;
 }
